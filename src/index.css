@@ -1,0 +1,155 @@
+:root {
+  --accent: #2b6cb0;
+  --muted: #6b7280;
+}
+
+/* Global Reset */
+* {
+  box-sizing: border-box;
+}
+
+body,
+html,
+#root {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: #f9fafb;
+}
+
+/* Navbar */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.nav .brand {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 20px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Containers */
+.container {
+  max-width: 1100px;
+  margin: 28px auto;
+  padding: 0 16px;
+}
+
+/* Form and Input */
+.form {
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  max-width: 520px;
+  margin: 12px 0;
+  box-shadow: 0 6px 18px rgba(11, 15, 25, 0.06);
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+/* Buttons */
+.btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.btn.ghost:hover {
+  background: rgba(43, 108, 176, 0.1);
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* Student Card */
+.student-card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(11, 15, 25, 0.06);
+}
+
+.student-card h3 {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+}
+
+.student-card p {
+  margin: 4px 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  max-width: 520px;
+  width: 100%;
+  box-shadow: 0 6px 18px rgba(11, 15, 25, 0.1);
+}
+
+/* Footer Info */
+.footer {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    padding: 10px;
+  }
+
+  .container {
+    margin: 16px auto;
+    padding: 0 10px;
+  }
+}
